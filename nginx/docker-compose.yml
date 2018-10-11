@@ -1,0 +1,10 @@
+version: '3'
+services:
+  api:
+    image: beautifullifes/nginx:latest
+    ports:
+      - '81:81'
+    volumes:
+      - /var/logs/nginx:/var/log/nginx
+      - /var/static/nginx:/usr/local/nginx/html
+    restart: always

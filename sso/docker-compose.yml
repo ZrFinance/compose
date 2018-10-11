@@ -1,0 +1,10 @@
+version: '3'
+services:
+  api:
+    image: beautifullifes/server:latest
+    env_file: sso.env
+    ports:
+      - '9601:8000'
+    volumes:
+      - /var/logs/sso:/project/sso/logs
+    restart: always
