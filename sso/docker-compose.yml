@@ -1,7 +1,7 @@
 version: '3'
 services:
   api:
-    image: beautifullifes/server:latest
+    image: zrfinance/server:latest
     env_file: sso.env
     ports:
       - '9601:8000'
