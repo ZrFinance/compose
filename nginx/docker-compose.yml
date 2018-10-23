@@ -7,4 +7,5 @@ services:
     volumes:
       - /var/logs/nginx:/var/log/nginx
       - /var/static/nginx:/usr/local/nginx/html
+      - /var/upload:/var/upload
     restart: always

@@ -7,4 +7,5 @@ services:
       - '9601:8000'
     volumes:
       - /var/logs/sso:/project/sso/logs
+      - /var/upload:/project/sso/media
     restart: always
