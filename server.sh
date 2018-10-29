@@ -77,6 +77,11 @@ main(){
 		echo "$item start..."
 		cd $curdir/$item
 		docker-compose pull && docker-compose up -d
+		if [ $item == 'sso' ]
+		then
+			a=$(docker ps | grep zrfinance/server:latest | awk '{print $1}')
+			docker exec -it $a python manage.py crontab add
+		fi
 		check $item
 		echo "$item end"
 	done

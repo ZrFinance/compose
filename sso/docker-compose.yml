@@ -8,4 +8,5 @@ services:
     volumes:
       - /var/logs/sso:/project/sso/logs
       - /var/nginx_upload:/project/sso/media
+      - /var/logs/ssocron:/var/logs/sso
     restart: always
