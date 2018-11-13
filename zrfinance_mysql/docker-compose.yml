@@ -1,0 +1,7 @@
+version: '3'
+services:
+  api:
+    image: zrfinance/mysql:latest
+    ports:
+      - '9106:3306'
+    restart: always
